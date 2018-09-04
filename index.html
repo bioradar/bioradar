@@ -25,9 +25,17 @@
 
         chart.draw(data, options);
       }
+      
+      function chargeChartLinks() {
+        var pre_url = "https://raw.githubusercontent.com/bioradar/bioradar.github.io/master/resources/";
+        ['EM', 'DMD', 'DM1', 'PV', 'VT', 'ES'].forEach(function(item, index){
+            document.querySelectorAll('g[column-id=item]')[0].addEventListener('click', function(){ window.open(pre_url+ item +'.txt', '_blank').focus(); });
+        });
+        
+      }
     </script>
   </head>
-  <body>
+  <body onload="chargeChartLinks()">
     <div id="piechart" style="width: 900px; height: 500px;"></div>
     <a href="Content-Disposition: attachment; filename=EM.txt; https://raw.githubusercontent.com/bioradar/bioradar.github.io/master/resources/EM.txt" target="_blank">-EM.txt-</a>
     <br>
