@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Doenças', 'Número'],
+          ['EM'     , 54],
+          ['DMD'    , 18],
+          ['DM1'    , 7],
+          ['PV'     , 2],
+          ['VT'     , 4],
+          ['ES'     , 14]
+        ]);
+
+        var options = {
+          title: 'TABELA1: BioProjects com amostras de pacientes'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+    </br>
+    <p>Esclerose Múltipla (EM), Distrofia Muscular de Duchenne (DMD), Diabetes Mellitus tipo 1(DM1), Vitiligo (VT), Escledermia (ES)<p>
+  </body>
+</html>
