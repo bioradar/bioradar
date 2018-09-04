@@ -4,8 +4,7 @@
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
-      function drawChart() { 
-        
+      function drawChart() {         
         var data = google.visualization.arrayToDataTable([
           ['Doenças', 'Link', 'Número'],             
           ['EM'     , 'https://raw.githubusercontent.com/bioradar/bioradar.github.io/master/resources/EM.txt' , 54],
@@ -13,12 +12,10 @@
           ['DM1'    , 'https://raw.githubusercontent.com/bioradar/bioradar.github.io/master/resources/DM1.txt', 7 ],
           ['PV'     , 'https://raw.githubusercontent.com/bioradar/bioradar.github.io/master/resources/PV.txt' , 2 ],
           ['VT'     , 'https://raw.githubusercontent.com/bioradar/bioradar.github.io/master/resources/VT.txt' , 4 ],
-          ['ES'     , 'https://raw.githubusercontent.com/bioradar/bioradar.github.io/master/resources/ES.txt' , 14]
-          
+          ['ES'     , 'https://raw.githubusercontent.com/bioradar/bioradar.github.io/master/resources/ES.txt' , 14]          
         ]);
 
-        var view = new google.visualization.DataView(data);
-        
+        var view = new google.visualization.DataView(data);        
         view.setColumns([0, 2]);
 
         var options = {
